@@ -17,7 +17,7 @@ https://github.com/Wodby/docker4drupal
 
 # Installation
 
-> Fork this project 
+> Clone this project 
 ```shell
 git clone https://github.com/Yorik56/drupal9 project_name
 ```
