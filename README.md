@@ -44,9 +44,9 @@ composer install
 
 > Create the "config/sync" folder and set the right permissions
 ```shell
-mkdir /var/www/html/config
-mkdir /var/www/html/config/sync
-sudo chmod 777 /var/www/html/config
+mkdir /var/www/html/config &&
+mkdir /var/www/html/config/sync &&
+sudo chmod 777 /var/www/html/config &&
 sudo chmod 777 /var/www/html/config/sync
 ```
 
