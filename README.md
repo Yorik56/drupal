@@ -15,6 +15,13 @@
 https://github.com/Wodby/docker4drupal
 [How to use](https://wodby.com/docs/1.0/stacks/drupal/local/#usage)
 
+# Requirment
+
+> You may need to install or enable PHP's gd extension (PHP Environment)
+```
+apt-get install php-gd
+```
+
 # Installation
 
 > Clone this project 
