@@ -37,7 +37,7 @@ docker-compose up
 docker exec -it my_drupal9_project_php /bin/bash
 ```
 
-> Run the following command to install Drupal 9
+> Run the following command to install Drupal 9 (at the root of the projet inside the container "/var/www/html")
 ```shell
 composer install
 ```
@@ -57,7 +57,7 @@ docker exec -it my_drupal9_project_php /bin/bash
 
 > Installation Drush (at the root of the projet inside the container "/var/www/html")
 ```shell
-composer require drush/drush:^10 (at the root of the projet inside the container "/var/www/html")
+composer require drush/drush:^10
 ```
 > Installation Admin toolbar drupal 8||9||10 (at the root of the projet inside the container "/var/www/html")
 ```shell
