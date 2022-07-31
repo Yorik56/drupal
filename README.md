@@ -50,9 +50,18 @@ sudo chmod 777 /var/www/html/config
 sudo chmod 777 /var/www/html/config/sync
 ```
 
-> Launch the Drupal website
+> Launch the Drupal website, you will be redirected to the installation page of the website
 
 http://drupal.docker.localhost:8000/
+
+```yaml
+# .env
+DB_NAME=drupal
+DB_USER=drupal
+DB_PASSWORD=drupal
+DB_HOST=mariadb
+```
+
 
 > Launch PHPMyAdmin
 
