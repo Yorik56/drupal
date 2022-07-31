@@ -42,10 +42,20 @@ docker exec -it my_drupal9_project_php /bin/bash
 composer install
 ```
 
+> Create the "config/sync" folder and set the right permissions
+```shell
+mkdir /var/www/html/config
+mkdir /var/www/html/config/sync
+sudo chmod 777 /var/www/html/config
+sudo chmod 777 /var/www/html/config/sync
+```
+
 > Launch the Drupal website
+
 http://drupal.docker.localhost:8000/
 
 > Launch PHPMyAdmin
+
 http://pma.drupal.docker.localhost:8000/
 
 # Extensions & Themes installation
