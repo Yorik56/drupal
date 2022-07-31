@@ -60,6 +60,7 @@ DB_NAME=drupal
 DB_USER=drupal
 DB_PASSWORD=drupal
 DB_HOST=mariadb
+DB_PORT=3306
 ```
 
 
