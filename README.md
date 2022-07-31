@@ -104,7 +104,7 @@ Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER
 > Set gin as admin theme  (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-vendor/bin/drush cset system.theme admin gin (at the root of the projet inside the container "/var/www/html")
+vendor/bin/drush cset system.theme admin gin 
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
 
