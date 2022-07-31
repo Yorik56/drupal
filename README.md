@@ -55,41 +55,40 @@ http://pma.drupal.docker.localhost:8000/
 docker exec -it my_drupal9_project_php /bin/bash
 ```
 
-> Installation Drush
+> Installation Drush (at the root of the projet inside the container "/var/www/html")
 ```shell
-composer require drush/drush:^10
+composer require drush/drush:^10 (at the root of the projet inside the container "/var/www/html")
 ```
-> Installation Admin toolbar drupal 8||9||10
+> Installation Admin toolbar drupal 8||9||10 (at the root of the projet inside the container "/var/www/html")
 ```shell
 composer require 'drupal/admin_toolbar:^3.1'
 ```
 
-> Installation of the theme Gin
+> Installation of the theme Gin (at the root of the projet inside the container "/var/www/html")
 ```shell
 composer require drupal/gin_toolbar:^1.0@beta drupal/gin:^3.0@beta
 ```
 
-> Enable theme gin (at the root of the project "/var/www/html")
+> Enable theme gin (at the root of the projet inside the container "/var/www/html")
 
 ```shell
 vendor/bin/drush theme:enable gin
 ```
 
-> Set gin as default theme (at the root of the project "/var/www/html")
+> Set gin as default theme (at the root of the projet inside the container "/var/www/html")
 
 ```shell
 vendor/bin/drush cset system.theme default gin
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
-> Set gin as admin theme (at the root of the project "/var/www/html")
+> Set gin as admin theme  (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-vendor/bin/drush cset system.theme admin gin
+vendor/bin/drush cset system.theme admin gin (at the root of the projet inside the container "/var/www/html")
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
 
-> Enable modules admin_toolbar, gin_toolbar (at the root of the project "/var/www/html")
-
+> Enable modules admin_toolbar, gin_toolbar  (at the root of the projet inside the container "/var/www/html")
 ```shell
 vendor/bin/drush en admin_toolbar admin_toolbar_tools gin_toolbar
 ```
