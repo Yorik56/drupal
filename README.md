@@ -77,7 +77,7 @@ docker exec -it my_drupal9_project_php /bin/bash
 
 > Installation Drush (at the root of the projet inside the container "/var/www/html")
 ```shell
-composer require drush/drush:^10
+composer require drush/drush:^10 -W
 ```
 > Installation Admin toolbar drupal 8||9||10 (at the root of the projet inside the container "/var/www/html")
 ```shell
