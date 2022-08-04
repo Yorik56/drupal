@@ -24,7 +24,7 @@ git clone https://github.com/Yorik56/drupal9 project_name
 
 > cd into the project_name folder
 ```shell   
-cd projet_name
+cd project_name
 ```
 
 > Run the following command to install the Docker images and run the containers
