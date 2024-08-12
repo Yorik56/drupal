@@ -34,7 +34,7 @@ docker-compose up
 
 > Launch the PHP container
 ```shell
-docker exec -it my_drupal_project_php /bin/bash
+docker exec -it drupal_project_php /bin/bash
 ```
 
 > Run the following command to install Drupal 9 (at the root of the projet inside the container "/var/www/html")
@@ -74,38 +74,38 @@ docker exec -it my_drupal9_project_php /bin/bash
 
 > Installation Drush (at the root of the projet inside the container "/var/www/html")
 ```shell
- docker exec -it my_drupal_project_php composer require drush/drush:^10 -W
+ docker exec -it drupal_project_php composer require drush/drush:^10 -W
 ```
 > Installation Admin toolbar drupal 8||9||10 (at the root of the projet inside the container "/var/www/html")
 ```shell
-docker exec -it my_drupal_project_php composer require 'drupal/admin_toolbar:^3.1'
+docker exec -it drupal_project_php composer require 'drupal/admin_toolbar:^3.1'
 ```
 
 > Installation of the theme Gin (at the root of the projet inside the container "/var/www/html")
 ```shell
-docker exec -it my_drupal_project_php composer require drupal/gin_toolbar:^1.0@beta drupal/gin:^3.0@beta
+docker exec -it drupal_project_php composer require drupal/gin_toolbar:^1.0@beta drupal/gin:^3.0@beta
 ```
 
 > Enable theme gin (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-docker exec -it my_drupal_project_php vendor/bin/drush theme:enable gin
+docker exec -it drupal_project_php vendor/bin/drush theme:enable gin
 ```
 
 > Set gin as default theme (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-docker exec -it my_drupal_project_php vendor/bin/drush cset system.theme default gin
+docker exec -it drupal_project_php vendor/bin/drush cset system.theme default gin
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
 > Set gin as admin theme  (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-docker exec -it my_drupal_project_php vendor/bin/drush cset system.theme admin gin
+docker exec -it drupal_project_php vendor/bin/drush cset system.theme admin gin
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
 
 > Enable modules admin_toolbar, gin_toolbar  (at the root of the projet inside the container "/var/www/html")
 ```shell
-docker exec -it my_drupal_project_php vendor/bin/drush en admin_toolbar admin_toolbar_tools gin_toolbar
+docker exec -it drupal_project_php vendor/bin/drush en admin_toolbar admin_toolbar_tools gin_toolbar
 ```
