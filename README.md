@@ -19,7 +19,7 @@ https://github.com/Wodby/docker4drupal
 
 > Clone this project
 ```shell
-git clone https://github.com/Yorik56/drupal9 project_name
+git clone https://github.com/Yorik56/drupal project_name
 ```
 
 > cd into the project_name folder
@@ -74,11 +74,11 @@ docker exec -it my_drupal9_project_php /bin/bash
 
 > Installation Drush (at the root of the projet inside the container "/var/www/html")
 ```shell
- docker exec -it drupal_project_php composer require drush/drush:^10 -W
+ docker exec -it drupal_project_php composer require drush/drush:^12 -W
 ```
 > Installation Admin toolbar drupal 8||9||10 (at the root of the projet inside the container "/var/www/html")
 ```shell
-docker exec -it drupal_project_php composer require 'drupal/admin_toolbar:^3.1'
+docker exec -it drupal_project_php composer require 'drupal/admin_toolbar'
 ```
 
 > Installation of the theme Gin (at the root of the projet inside the container "/var/www/html")
