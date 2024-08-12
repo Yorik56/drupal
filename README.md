@@ -4,8 +4,8 @@
 - nginx 1.21-5.24.1
 - MySQL 5.7
 - mariadb 10.8-3.21.0
-- mailhog:latest 
-- traefik:v2.0 
+- mailhog:latest
+- traefik:v2.0
 - phpmyadmin:latest
 - Drupal 9-4.44.7
 
@@ -17,24 +17,24 @@ https://github.com/Wodby/docker4drupal
 
 # Installation
 
-> Clone this project 
+> Clone this project
 ```shell
 git clone https://github.com/Yorik56/drupal9 project_name
 ```
 
 > cd into the project_name folder
-```shell   
+```shell
 cd project_name
 ```
 
 > Run the following command to install the Docker images and run the containers
-```shell    
+```shell
 docker-compose up
 ```
 
 > Launch the PHP container
 ```shell
-docker exec -it my_drupal9_project_php /bin/bash
+docker exec -it my_drupal_project_php /bin/bash
 ```
 
 > Run the following command to install Drupal 9 (at the root of the projet inside the container "/var/www/html")
@@ -44,10 +44,7 @@ composer install
 
 > Create the "config/sync" folder and set the right permissions
 ```shell
-mkdir /var/www/html/config &&
-mkdir /var/www/html/config/sync &&
-sudo chmod 777 /var/www/html/config &&
-sudo chmod 777 /var/www/html/config/sync
+mkdir /var/www/html/config && mkdir /var/www/html/config/sync && sudo chmod 777 /var/www/html/config && sudo chmod 777 /var/www/html/config/sync
 ```
 
 > Launch the Drupal website, you will be redirected to the installation page of the website
@@ -77,38 +74,38 @@ docker exec -it my_drupal9_project_php /bin/bash
 
 > Installation Drush (at the root of the projet inside the container "/var/www/html")
 ```shell
-composer require drush/drush:^10 -W
+ docker exec -it my_drupal_project_php composer require drush/drush:^10 -W
 ```
 > Installation Admin toolbar drupal 8||9||10 (at the root of the projet inside the container "/var/www/html")
 ```shell
-composer require 'drupal/admin_toolbar:^3.1'
+docker exec -it my_drupal_project_php composer require 'drupal/admin_toolbar:^3.1'
 ```
 
 > Installation of the theme Gin (at the root of the projet inside the container "/var/www/html")
 ```shell
-composer require drupal/gin_toolbar:^1.0@beta drupal/gin:^3.0@beta
+docker exec -it my_drupal_project_php composer require drupal/gin_toolbar:^1.0@beta drupal/gin:^3.0@beta
 ```
 
 > Enable theme gin (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-vendor/bin/drush theme:enable gin
+docker exec -it my_drupal_project_php vendor/bin/drush theme:enable gin
 ```
 
 > Set gin as default theme (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-vendor/bin/drush cset system.theme default gin
+docker exec -it my_drupal_project_php vendor/bin/drush cset system.theme default gin
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
 > Set gin as admin theme  (at the root of the projet inside the container "/var/www/html")
 
 ```shell
-vendor/bin/drush cset system.theme admin gin 
+docker exec -it my_drupal_project_php vendor/bin/drush cset system.theme admin gin
 Do you want to update default key in system.theme config? (yes/no) [yes]: (ENTER)
 ```
 
 > Enable modules admin_toolbar, gin_toolbar  (at the root of the projet inside the container "/var/www/html")
 ```shell
-vendor/bin/drush en admin_toolbar admin_toolbar_tools gin_toolbar
+docker exec -it my_drupal_project_php vendor/bin/drush en admin_toolbar admin_toolbar_tools gin_toolbar
 ```
