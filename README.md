@@ -69,7 +69,7 @@ http://pma.drupal.docker.localhost:8000/
 
 > Launch the PHP container
 ```shell
-docker exec -it my_drupal9_project_php /bin/bash
+docker exec -it drupal_project_php /bin/bash
 ```
 
 > Installation Drush (at the root of the projet inside the container "/var/www/html")
@@ -83,7 +83,7 @@ docker exec -it drupal_project_php composer require 'drupal/admin_toolbar'
 
 > Installation of the theme Gin (at the root of the projet inside the container "/var/www/html")
 ```shell
-docker exec -it drupal_project_php composer require drupal/gin_toolbar:^1.0@beta drupal/gin:^3.0@beta
+docker exec -it drupal_project_php composer require drupal/gin_toolbar drupal/gin
 ```
 
 > Enable theme gin (at the root of the projet inside the container "/var/www/html")
